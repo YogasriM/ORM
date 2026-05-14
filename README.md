@@ -17,6 +17,42 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 cars
 
 # PROGRAM
+
+## ADMIN.PY 
+```
+from django.contrib import admin
+from .models import FoodOrder
+
+@admin.register(FoodOrder)
+class FoodOrderAdmin(admin.ModelAdmin):
+    list_display = (
+        'order_id',
+        'customer_name',
+        'restaurant_name',
+        'food_item',
+        'quantity',
+        'price',
+        'order_status'
+    )
+```
+
+## MODELS.PY 
+```
+from django.db import models
+
+class FoodOrder(models.Model):
+    order_id = models.AutoField(primary_key=True)
+    customer_name = models.CharField(max_length=100)
+    restaurant_name = models.CharField(max_length=100)
+    food_item = models.CharField(max_length=100)
+    quantity = models.IntegerField()
+    price = models.FloatField()
+    delivery_address = models.CharField(max_length=200)
+    order_status = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.customer_name
+```
 # OUTPUT
 Include the screenshot of your admin page.
 
