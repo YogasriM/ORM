@@ -55,6 +55,9 @@ class FoodOrder(models.Model):
 ```
 # OUTPUT
 Include the screenshot of your admin page.
+<img width="1903" height="1032" alt="Screenshot 2026-05-14 204147" src="https://github.com/user-attachments/assets/8955bdfe-9bdb-4b8d-a17c-18d4b8e80faa" />
+<img width="1919" height="1121" alt="Screenshot 2026-05-14 204126" src="https://github.com/user-attachments/assets/00b0e0c3-9182-4126-94f8-9b607a7037a6" />
+
 
 # RESULT
 Thus the program for creating a database using ORM hass been executed successfully
